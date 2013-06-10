@@ -9,8 +9,9 @@ import (
 	"strings"
 )
 
-func (f Frame) Add(a []float64) {
+func (f Frame) Add(a []float64) Frame {
 	f.Vars = append(f.Vars, a)
+	return f
 }
 
 func newFrame(id int) Frame {
@@ -168,7 +169,7 @@ func LoadAnimation(file string) *MD5Animation {
 		}
 
 		if status == "frame" {
-			anim.Frames[len(anim.Frames)].Add(parseLots(line))
+			anim.Frames[len(anim.Frames)-1] = anim.Frames[len(anim.Frames)-1].Add(parseLots(line))
 		}
 
 	}
