@@ -1,5 +1,14 @@
 package md5
 
+import (
+	"bufio"
+	"io"
+	"os"
+	"regexp"
+	"strconv"
+	"strings"
+)
+
 func (f Frame) Add(a []float64) {
 	f.Vars = append(f.Vars, a)
 }
