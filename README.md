@@ -1,6 +1,7 @@
 # MD5
 
-This is a library for loading (and possibly eventually rendering/etc) MD5 animations (.md5mesh .md5anim). It currently only supports loading (not saving) of MD5 files.
+This is a library for loading (and possibly eventually rendering/etc) MD5 animations (.md5mesh .md5anim). It currently only supports loading (not saving) of MD5 files. It was built to match the MD5Mesh/Anim specifications (you can view those over at http://tfc.duke.free.fr/coding/md5-specs-en.html). The library exposes too main functions, `LoadAnimation(s string)` and `LoadMesh(s string)` which both take a file name/path and return an MD5Animation or MD5Mesh accordingly. 
+
 
 ```go
 package main
